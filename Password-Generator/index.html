@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Generator Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>Password Generator</h1>
+        <button id="themeBtn">🌙</button>
+    </div>
+
+    <div class="password-box">
+        <input type="text" id="password" readonly>
+        <button id="copyBtn">Copy</button>
+    </div>
+
+    <div class="setting">
+        <label>
+            Length:
+            <span id="lengthValue">12</span>
+        </label>
+
+        <input
+            type="range"
+            id="length"
+            min="4"
+            max="30"
+            value="12"
+        >
+    </div>
+
+    <div class="options">
+
+        <label>
+            <input type="checkbox" id="uppercase" checked>
+            Uppercase
+        </label>
+
+        <label>
+            <input type="checkbox" id="lowercase" checked>
+            Lowercase
+        </label>
+
+        <label>
+            <input type="checkbox" id="numbers" checked>
+            Numbers
+        </label>
+
+        <label>
+            <input type="checkbox" id="symbols" checked>
+            Symbols
+        </label>
+
+    </div>
+
+    <button id="generateBtn">
+        Generate Password
+    </button>
+
+    <button id="downloadBtn">
+        Download TXT
+    </button>
+
+    <div class="strength-container">
+
+        <div class="progress">
+
+            <div id="strengthBar"></div>
+
+        </div>
+
+        <p id="strengthText">
+            Medium
+        </p>
+
+    </div>
+
+    <h3>QR Code</h3>
+
+    <div id="qrcode"></div>
+
+    <div class="history">
+
+        <div class="history-head">
+
+            <h3>Password History</h3>
+
+            <button id="clearHistory">
+                Clear
+            </button>
+
+        </div>
+
+        <ul id="historyList"></ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
